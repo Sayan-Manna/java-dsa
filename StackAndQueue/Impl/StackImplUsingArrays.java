@@ -3,7 +3,7 @@ package StackAndQueue.Impl;
 
 public class StackImplUsingArrays {
     public static void main(String[] args) {
-        StackImpls.ArrayStack st = new stack();
+        StackImpls.ArrayStack st = new StackImpls.ArrayStack();
         st.push(6);
         st.push(3);
         st.push(2);
@@ -14,7 +14,4 @@ public class StackImplUsingArrays {
         System.out.println("Top of the stack after deleting an element " + st.top());
     }
 }
-/*
- * LIFO manner -> so keep track of last element -> use top as the tracker -> set to -1
- *
- */
+
