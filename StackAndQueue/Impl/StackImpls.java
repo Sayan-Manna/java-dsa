@@ -5,9 +5,9 @@ public class StackImpls {
      * LIFO manner -> so keep track of last element -> use top as the tracker -> set to -1
      */
     public static class ArrayStack {
-        int size = 1000;
-        int[] arr = new int[size];
-        int top = -1;
+        private final int size = 1000;
+        private final int[] arr = new int[size];
+        private int top = -1;
 
 
         void push(int num) {
