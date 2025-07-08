@@ -56,7 +56,11 @@ public class StackImpls {
             size++;
         }
         int stackPop() {
-
+            if (top == null) return -1;
+            int topData = top.val;
+            stackNode temp = top;
+            top = top.next;
+            return topData;
 
         }
     }
