@@ -32,7 +32,7 @@ public class StackImpls {
     }
     public static class LinkedListStack {
         // creating the stack node
-        private class stackNode {
+        class stackNode {
             int val;
             stackNode next;
             stackNode(int d) {
@@ -43,7 +43,7 @@ public class StackImpls {
         stackNode top;
         int size;
 
-        stack() {
+        LinkedListStack() {
             this.top = null;
             this.size = 0;
         }
