@@ -78,7 +78,7 @@ public class StackImpls {
             int topData = top.val;
             stackNode temp = top;
             top = top.next;
-//            size--;
+            size--;
             return topData;
 
         }
