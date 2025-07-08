@@ -10,23 +10,23 @@ public class StackImpls {
         private int top = -1;
 
 
-        void push(int num) {
+        public void push(int num) {
             ++top;
             arr[top] = num;
         }
 
-        int pop() {
+        public int pop() {
             int elem = arr[top];
             top--;
             return elem;
 
         }
 
-        int top() {
+        public int top() {
             return arr[top];
         }
 
-        int size() {
+        public int size() {
             return top + 1;
         }
     }
