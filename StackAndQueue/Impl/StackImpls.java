@@ -11,7 +11,7 @@ public class StackImpls {
 
 
         void push(int num) {
-            ++top;
+            top++;
             arr[top] = num;
         }
 
