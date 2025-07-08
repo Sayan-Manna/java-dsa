@@ -23,10 +23,13 @@ class stack {
 
     void stackPush(int x) {
         stackNode elemNode = new stackNode(x);
-        elemNode.next = top;
+        elemNode.next = top; // structure top -> [2] -> [1] -> null
         top = elemNode;
         System.out.println("pushed");
         size++;
+    }
+    int stackPop() {
+
     }
 
 }
