@@ -24,6 +24,9 @@ class stack {
     void stackPush(int x) {
         stackNode elemNode = new stackNode(x);
         elemNode.next = top;
+        top = elemNode;
+        System.out.println("pushed");
+        size++;
     }
 
 }
