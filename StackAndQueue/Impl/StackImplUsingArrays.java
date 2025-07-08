@@ -3,7 +3,7 @@ package StackAndQueue.Impl;
 
 public class StackImplUsingArrays {
     public static void main(String[] args) {
-        stack st = new stack();
+        StackImpls.ArrayStack st = new stack();
         st.push(6);
         st.push(3);
         st.push(2);
@@ -18,9 +18,3 @@ public class StackImplUsingArrays {
  * LIFO manner -> so keep track of last element -> use top as the tracker -> set to -1
  *
  */
-
-class stack {
-
-
-
-}
