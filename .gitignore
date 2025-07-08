@@ -2,3 +2,5 @@
 out/
 Basic_Codes.iml
 .DS_Store
+auto_push.sh
+tmp/**
