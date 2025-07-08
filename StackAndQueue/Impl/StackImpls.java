@@ -95,7 +95,6 @@ public class StackImpls {
                 System.out.println(curr.val + " -> ");
                 curr = curr.next;
             }
-            System.out.println();
         }
     }
 
