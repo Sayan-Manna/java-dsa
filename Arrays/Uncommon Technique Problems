@@ -1,0 +1,16 @@
+// Array
+1. Missing & Repeating number in array : XOR, Math
+2. check if array is sorted and rotated : Mod
+3. find duplicate element from array of n+1 integers : LL
+4. find duplicates in O(1) TC : => abs
+5. Number appears one while others two : XOR
+6. Remove duplicates by shifting non-duplicates to front and returning the size : Two Pointer
+7. Symmetric Pairs : HashMap
+9. Move 0s to End
+10. Pairs problems (hashing), 2pointer etc
+11. Equilibrium index - total sum
+
+// String
+1. rotations questions: s+s, for i to n -> s.substring(i, i+n) => if i starting from 1 then oroginal string will be in th last othewise it will be in the first
+2.
+// LL

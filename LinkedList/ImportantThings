@@ -1,0 +1,8 @@
+1. Always think about what to return at the end, for example: head, head.val, head.next etc
+2. head is a reference, not the value
+2. In Two pointer approaches, thing about what operator to use
+    && => if one is false, the loop gets false === 1.0=0, 0.1=0
+    || => if one is false but second the still true, the loop will get executed
+3. Find Middle -> remember && to use, remember the x, x/2 intuition for tortoise and hare method
+                -> brute-> count first -> n/2+1 then count-- accordingly
+4.
