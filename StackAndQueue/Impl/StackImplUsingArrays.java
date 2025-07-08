@@ -19,7 +19,7 @@ public class StackImplUsingArrays {
  *
  */
 
-class Stack {
+class stack {
     int size = 1000;
     int[] arr = new int[size];
     int top = -1;

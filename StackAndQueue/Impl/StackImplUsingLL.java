@@ -3,7 +3,7 @@ package StackAndQueue.Impl;
 public class StackImplUsingLL {
 
 }
-class stack {
+private class stack {
     // creating the stack node
     private class stackNode {
         int val;
@@ -29,6 +29,7 @@ class stack {
         size++;
     }
     int stackPop() {
+
 
     }
 
