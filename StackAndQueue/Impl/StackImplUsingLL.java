@@ -2,5 +2,5 @@ package StackAndQueue.Impl;
 
 public class StackImplUsingLL {
     StackImpls.LinkedListStack s = new StackImpls.LinkedListStack();
-    StackImpls.LinkedListStack.stackNode
+    s.stackPush(2);
 }

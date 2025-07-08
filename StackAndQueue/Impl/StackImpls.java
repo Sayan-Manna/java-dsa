@@ -58,7 +58,7 @@ public class StackImpls {
         * elemNode.next = top :: [2] -> [1] -> null;
         * top = [2], size = 2
          */
-        void stackPush(int x) {
+        public void stackPush(int x) {
             stackNode elemNode = new stackNode(x);
             elemNode.next = top; // structure top ---> [2] -> [1] -> null
             top = elemNode;
