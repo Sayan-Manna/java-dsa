@@ -3,7 +3,7 @@ package StackAndQueue.Impl;
 
 public class StackImplUsingArrays {
     public static void main(String[] args) {
-        Stack st = new Stack();
+        stack st = new stack();
         st.push(6);
         st.push(3);
         st.push(2);
