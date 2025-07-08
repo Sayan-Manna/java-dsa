@@ -86,8 +86,17 @@ public class StackImpls {
         int stackSize() {
             return size;
         }
-
-
+        boolean isStackEmpty() {
+            return top == null;
+        }
+        void printStack() {
+            stackNode curr = top;
+            while (curr != null) {
+                System.out.println(curr.val + " -> ");
+                curr = curr.next;
+            }
+            System.out.println();
+        }
     }
 
 }
