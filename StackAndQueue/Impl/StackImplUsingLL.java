@@ -20,6 +20,9 @@ class stack {
         this.top = null;
         this.size = 0;
     }
-    
+
+    void stackPush(int x) {
+
+    }
 
 }
