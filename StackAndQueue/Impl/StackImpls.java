@@ -78,7 +78,7 @@ public class StackImpls {
             int topData = top.val;
             stackNode temp = top;
             top = top.next;
-            size--;
+//            size--;
             return topData;
 
         }
@@ -92,9 +92,11 @@ public class StackImpls {
         void printStack() {
             stackNode curr = top;
             while (curr != null) {
-                System.out.println(curr.val + " -> ");
+                System.out.print(curr.val + " -> ");
                 curr = curr.next;
             }
+            System.out.print(" X ");
+            System.out.println();
         }
     }
 
