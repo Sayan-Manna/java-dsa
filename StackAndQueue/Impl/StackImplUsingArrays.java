@@ -20,30 +20,7 @@ public class StackImplUsingArrays {
  */
 
 class stack {
-    int size = 1000;
-    int[] arr = new int[size];
-    int top = -1;
 
-
-    void push(int num) {
-        ++top;
-        arr[top] = num;
-    }
-
-    int pop() {
-        int elem = arr[top];
-        top--;
-        return elem;
-
-    }
-
-    int top() {
-        return arr[top];
-    }
-
-    int size() {
-        return top + 1;
-    }
 
 
 }
