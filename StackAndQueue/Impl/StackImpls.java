@@ -10,23 +10,23 @@ public class StackImpls {
         private int top = -1;
 
 
-        public void push(int num) {
+        void push(int num) {
             ++top;
             arr[top] = num;
         }
 
-        public int pop() {
+        int pop() {
             int elem = arr[top];
             top--;
             return elem;
 
         }
 
-        public int top() {
+        int top() {
             return arr[top];
         }
 
-        public int size() {
+        int size() {
             return top + 1;
         }
     }
@@ -47,7 +47,17 @@ public class StackImpls {
             this.top = null;
             this.size = 0;
         }
-
+        /*
+        * top : null, size = 0
+        * elemNode : [1]->null
+        * elemNode.next = top :: [1] -> null
+        * top = [1], size = 1
+        -----
+        * top : [1], size = 1
+        * elemNode : [2] -> null
+        * elemNode.next = top :: [2] -> [1] -> null;
+        * top = [2], size = 2
+         */
         void stackPush(int x) {
             stackNode elemNode = new stackNode(x);
             elemNode.next = top; // structure top ---> [2] -> [1] -> null
@@ -55,13 +65,26 @@ public class StackImpls {
             System.out.println("pushed");
             size++;
         }
+        /*
+        * [2] -------------------> [1] -> x
+          top (val: 2 return)
+        * [2] -> [1] - >x
+          top,tmp
+        * [2] -> [1] -> x
+          tmp    top
+         */
         int stackPop() {
             if (top == null) return -1;
             int topData = top.val;
             stackNode temp = top;
             top = top.next;
+            size--;
             return topData;
 
+        }
+
+        int stackSize() {
+            return size;
         }
 
 
