@@ -38,7 +38,7 @@ public class NextGreaterElem {
         // for circular :
         /*
         * 2nd loop starts from 1,
-        * next index = (i+j) % n
+        * next index = (i+j) % n -> ensures we start from the next position after i and move circularly
         * as circular no need the extra last element check
          */
 
