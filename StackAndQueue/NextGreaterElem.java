@@ -21,7 +21,10 @@ public class NextGreaterElem {
         int n = arr.length;
         Stack<Integer> st = new Stack<>();
         int[] nge = new int[n];
-        
+        for (int i=n-1; i>=0; i--){
+            if (st.empty()) nge[i] = -1;
+            else 
+        }
 
 
         // Brute-force - non - circular --------------|
