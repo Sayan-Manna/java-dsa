@@ -17,15 +17,16 @@ public class NextGreaterElem {
         * So fix one check if any num > fixed curr no.
          */
         int[] nge = new int[arr.length];
-        boolean isPresent = false;
         for (int i=0; i<arr.length-1; i++) {
-            nge[i] = -1;
+            boolean isPresent = false;
             for (int j=i+1; j<arr.length; j++) {
                 if (arr[j] > arr[i]) {
                     nge[i] = arr[j];
+                    isPresent = true;
                     break;
                 }
             }
+            if (!isPresent) nge[i] = -1;
         }
         return nge;
     }
