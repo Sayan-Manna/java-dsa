@@ -35,5 +35,11 @@ public class NextGreaterElem {
 //        nge[n-1] = -1; //when loop ends and last element is not traversed
 //        return nge;
 
+        // for circular :
+        /*
+        * 2nd loop starts from 1,
+        * next index = 
+         */
+
     }
 }
