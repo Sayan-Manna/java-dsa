@@ -28,6 +28,7 @@ public class NextGreaterElem {
                     nge[i] = arr[j];
                     isPresent = true;
                     break;
+                    
                 }
             }
             if (!isPresent) nge[i] = -1;
