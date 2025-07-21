@@ -30,6 +30,5 @@ public class NextGreaterElem {
             }
         }
         return nge;
-
     }
 }
