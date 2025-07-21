@@ -23,7 +23,6 @@ public class NextGreaterElem {
             for (int j=i+1; j<arr.length; j++) {
                 if (arr[j] > arr[i]) {
                     nge[i] = arr[j];
-                    isPresent = true;
                     break;
                 }
             }
