@@ -32,7 +32,7 @@ public class NextGreaterElem {
             }
             if (!isPresent) nge[i] = -1;
         }
-        if (isPresent) nge[n-1] = -1;
+        if (isPresent) nge[n-1] = -1; //when loop ends and last element is not traversed
         return nge;
     }
 }
