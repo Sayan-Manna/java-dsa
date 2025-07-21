@@ -22,8 +22,12 @@ public class NextGreaterElem {
         Stack<Integer> st = new Stack<>();
         int[] nge = new int[n];
         for (int i=n-1; i>=0; i--){
+            while (!st.empty() && arr[i] >= st.peek()) {
+                
+            }
             if (st.empty()) nge[i] = -1;
-            else 
+            else nge[i] = st.peek();
+            st.push(arr[i]);
         }
 
 
