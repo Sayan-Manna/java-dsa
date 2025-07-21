@@ -23,12 +23,13 @@ public class NextGreaterElem {
         int[] nge = new int[n];
         for (int i=n-1; i>=0; i--){
             while (!st.empty() && arr[i] >= st.peek()) {
-                
+                st.pop();
             }
             if (st.empty()) nge[i] = -1;
             else nge[i] = st.peek();
             st.push(arr[i]);
         }
+        return nge;
 
 
         // Brute-force - non - circular --------------|
