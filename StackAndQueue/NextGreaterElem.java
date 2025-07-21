@@ -19,8 +19,8 @@ public class NextGreaterElem {
         int[] nge = new int[arr.length];
         for (int i=0; i<arr.length-1; i++) {
             boolean isPresent = false;
-            for (int j=i+1; j<arr.length; j++) {
-                int idx = (i+j) % n;
+            for (int j=1; j<arr.length; j++) {
+                int idx = (i+j) % arr.length;
                 if (arr[idx] > arr[i]) {
                     nge[i] = arr[idx];
                     isPresent = true;
