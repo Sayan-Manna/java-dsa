@@ -20,9 +20,8 @@ public class NextGreaterElem {
          */
 //        int n = arr.length;
 //        int[] nge = new int[n];
-//        boolean isPresent = false;
 //        for (int i=0; i<n-1; i++) {
-//            isPresent = false;
+//            boolean isPresent = false;
 //            for (int j=i+1; j<n; j++) {
 //                if (arr[j] > arr[i]) {
 //                    nge[i] = arr[j];
@@ -33,8 +32,8 @@ public class NextGreaterElem {
 //            }
 //            if (!isPresent) nge[i] = -1;
 //        }
-//        if (isPresent) nge[n-1] = -1; //when loop ends and last element is not traversed
+//        nge[n-1] = -1; //when loop ends and last element is not traversed
 //        return nge;
-        
+
     }
 }
