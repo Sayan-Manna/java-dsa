@@ -17,7 +17,9 @@ public class NextGreaterElem {
         * So fix one check if any num > fixed curr no.
          */
         for (int i=0; i<arr.length; i++) {
-            
+            for (int j=0; j<arr.length; j++) {
+                
+            }
         }
 
     }
