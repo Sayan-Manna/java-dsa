@@ -1,5 +1,7 @@
 package StackAndQueue;
 
+import java.util.Stack;
+
 public class NextGreaterElem {
     public static void main(String[] args) {
 //        int arr[]={4,5,2,25};
@@ -15,7 +17,11 @@ public class NextGreaterElem {
 
     private static int[] nextGreaterElements(int[] arr) {
 
-        // 
+        // Using monotonic stack
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int[] nge = new int[n];
+        
 
 
         // Brute-force - non - circular --------------|
