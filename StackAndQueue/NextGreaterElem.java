@@ -14,7 +14,11 @@ public class NextGreaterElem {
     }
 
     private static int[] nextGreaterElements(int[] arr) {
-        // Brute-force - non - circular
+
+        // 
+
+
+        // Brute-force - non - circular --------------|
         /*
         * So fix one check if any num > fixed curr no.
          */
