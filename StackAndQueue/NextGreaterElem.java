@@ -2,8 +2,8 @@ package StackAndQueue;
 
 public class NextGreaterElem {
     public static void main(String[] args) {
-        int arr[]={4,5,2,25};
-//        int arr[]={5,7,1,7,6,0};
+//        int arr[]={4,5,2,25};
+        int arr[]={5,7,1,7,6,0};
 
         int arr2[] = nextGreaterElements(arr);
         System.out.println("The next greater elements are ");
@@ -18,8 +18,9 @@ public class NextGreaterElem {
         * So fix one check if any num > fixed curr no.
          */
         int[] nge = new int[arr.length];
+        boolean isPresent = false;
         for (int i=0; i<arr.length-1; i++) {
-            boolean isPresent = false;
+            isPresent = false;
             for (int j=i+1; j<arr.length; j++) {
                 if (arr[j] > arr[i]) {
                     nge[i] = arr[j];
@@ -29,6 +30,7 @@ public class NextGreaterElem {
             }
             if (!isPresent) nge[i] = -1;
         }
+        if (isPresent) nge[arr.length-1] = -1;
         return nge;
     }
 }
