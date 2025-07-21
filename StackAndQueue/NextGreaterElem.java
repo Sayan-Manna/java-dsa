@@ -3,7 +3,8 @@ package StackAndQueue;
 public class NextGreaterElem {
     public static void main(String[] args) {
 //        int arr[]={4,5,2,25};
-        int arr[]={5,7,1,7,6,0};
+//        int arr[]={5,7,1,7,6,0};
+        int arr[] = {6,0,8,1,3};
 
         int arr2[] = nextGreaterElements(arr);
         System.out.println("The next greater elements are ");
@@ -13,7 +14,7 @@ public class NextGreaterElem {
     }
 
     private static int[] nextGreaterElements(int[] arr) {
-        // Brute-force
+        // Brute-force - non - circular
         /*
         * So fix one check if any num > fixed curr no.
          */
