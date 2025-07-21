@@ -2,8 +2,8 @@ package StackAndQueue;
 
 public class NextGreaterElem {
     public static void main(String[] args) {
-//        int arr[]={4,5,2,25};
-        int arr[]={5,7,1,7,6,0};
+        int arr[]={4,5,2,25};
+//        int arr[]={5,7,1,7,6,0};
 
         int arr2[] = nextGreaterElements(arr);
         System.out.println("The next greater elements are ");
@@ -20,10 +20,9 @@ public class NextGreaterElem {
         int[] nge = new int[arr.length];
         for (int i=0; i<arr.length-1; i++) {
             boolean isPresent = false;
-            for (int j=1; j<arr.length; j++) {
-                int idx = (i+j) % arr.length;
-                if (arr[idx] > arr[i]) {
-                    nge[i] = arr[idx];
+            for (int j=i+1; j<arr.length; j++) {
+                if (arr[j] > arr[i]) {
+                    nge[i] = arr[j];
                     isPresent = true;
                     break;
                 }
