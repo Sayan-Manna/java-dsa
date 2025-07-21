@@ -1,7 +1,5 @@
 package StackAndQueue;
 
-import java.util.Arrays;
-
 public class NextGreaterElem {
     public static void main(String[] args) {
         int arr[]={4,5,2,25};
@@ -21,7 +19,7 @@ public class NextGreaterElem {
         int[] nge = new int[arr.length];
         boolean noMatch = true;
         for (int i=0; i<arr.length-1; i++) {
-            if (!noMatch) nge[i] = -1;
+            nge[i] = -1;
             for (int j=i+1; j<arr.length; j++) {
                 if (arr[j] > arr[i]) {
                     nge[i] = arr[j];
