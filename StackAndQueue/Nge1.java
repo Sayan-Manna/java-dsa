@@ -30,9 +30,13 @@ public class Nge1 {
                     boolean hasNge = false;
 
                     for (int k = j+1; k<n2; k++) {
-                        if (nums2[k] >target )
+                        if (nums2[k] > nums2[j]) {
+                            hasNge = true;
+                            nge[i] = nums2[k];
+                            break;
+                        }
                     }
-
+                    if (!hasNge) nge[i] = -1;
                 }
             }
         }
