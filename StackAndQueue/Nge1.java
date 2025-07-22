@@ -14,7 +14,13 @@ Explanation: The next greater element for each value of nums1 is as follows:
 public class Nge1 {
 
     private static int[] nge1(int[] nums1, int[] nums2) {
-        
+        // Brute-force
+        int n1 = nums1.length, n2=nums2.length;
+        int[] nge = new int[n1];
+
+        // 1st check which number's nge we need to find out
+        for (int i=0; )
+
     }
 
     public static void main(String[] args) {
