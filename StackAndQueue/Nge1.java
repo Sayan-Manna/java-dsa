@@ -1,4 +1,7 @@
 package StackAndQueue;
+
+import java.util.Arrays;
+
 // LC: 496
 /*
 Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
@@ -9,10 +12,17 @@ Explanation: The next greater element for each value of nums1 is as follows:
 - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
 */
 public class Nge1 {
+
+    private static int[] nge1(int[] nums1, int[] nums2) {
+        
+    }
+
     public static void main(String[] args) {
         int[] nums1 = {4,1,2};
         int[] nums2 = {1,3,4,2};
-        
+
+        int[] res = nge1(nums1, nums2);
+        System.out.println(Arrays.toString(res));
 
     }
 }
