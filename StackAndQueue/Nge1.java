@@ -20,7 +20,12 @@ public class Nge1 {
         // Optimal ------------------------------|
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
-        
+        int n = nums1.length;
+        int[] nge = new int[n];
+
+        for (int num : nums2) {
+            while (!stack.isEmpty() )
+        }
 
 
 
