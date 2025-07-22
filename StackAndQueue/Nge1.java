@@ -30,7 +30,7 @@ public class Nge1 {
                     boolean hasNge = false;
 
                     for (int k = j+1; k<n2; k++) {
-                        if (nums2)
+                        if (nums2[])
                     }
 
                 }
