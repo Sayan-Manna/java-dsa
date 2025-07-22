@@ -36,39 +36,38 @@ public class Nge1 {
 
         // Brute-force ---------------------------| O(n1 * n2)
         // image : [2025-07-22-21-01-51.png]
-
-        // int n1 = nums1.length, n2=nums2.length;
-        // int[] nge = new int[n1];
-        //
-        // // 1st check which number's nge we need to find out
-        // for (int i=0; i<n1; i++){
-        // int target = nums1[i];
-        // boolean found = false;
-        //
-        // // find the nge for the target number
-        // for (int j=0; j<n2; j++) {
-        // if (nums2[j] == target) {
-        // found = true; // we found the target number in nums2[], now find the nge
-        // boolean hasNge = false;
-        //
-        // for (int k = j+1; k<n2; k++) {
-        // if (nums2[k] > nums2[j]) {
-        // hasNge = true;
-        // nge[i] = nums2[k];
-        // break;
-        // }
-        // }
-        // if (!hasNge) nge[i] = -1;
-        // break;
-        // }
-        // }
-        // }
-        // return nge;
+//        int n1 = nums1.length, n2 = nums2.length;
+//        int[] nge = new int[n1];
+//
+//        // 1st check which number's nge we need to find out
+//        for (int i = 0; i < n1; i++) {
+//            int target = nums1[i];
+//            boolean found = false;
+//
+//            // find the nge for the target number
+//            for (int j = 0; j < n2; j++) {
+//                if (nums2[j] == target) {
+//                    found = true; // we found the target number in nums2[], now find the nge
+//                    boolean hasNge = false;
+//
+//                    for (int k = j + 1; k < n2; k++) {
+//                        if (nums2[k] > nums2[j]) {
+//                            hasNge = true;
+//                            nge[i] = nums2[k];
+//                            break;
+//                        }
+//                    }
+//                    if (!hasNge) nge[i] = -1;
+//                    break;
+//                }
+//            }
+//        }
+//        return nge;
     }
 
     public static void main(String[] args) {
-        int[] nums1 = { 4, 1, 2 };
-        int[] nums2 = { 1, 3, 4, 2 };
+        int[] nums1 = {4, 1, 2};
+        int[] nums2 = {1, 3, 4, 2};
 
         int[] res = nge1(nums1, nums2);
         System.out.println(Arrays.toString(res));
