@@ -35,7 +35,7 @@ public class Nge1 {
         return nge;
 
         // Brute-force ---------------------------| O(n1 * n2)
-        // 2025-07-22-21-01-51.png
+        // image : [2025-07-22-21-01-51.png]
 
         // int n1 = nums1.length, n2=nums2.length;
         // int[] nge = new int[n1];
