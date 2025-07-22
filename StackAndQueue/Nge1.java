@@ -30,7 +30,7 @@ public class Nge1 {
             stack.push(num);
         }
         for (int i=0; i<n; i++) {
-            
+            nge[i] = map.getOrDefault(nums1[i], -1);
         }
 
 
