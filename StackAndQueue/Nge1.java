@@ -37,10 +37,11 @@ public class Nge1 {
                         }
                     }
                     if (!hasNge) nge[i] = -1;
+                    break;
                 }
             }
         }
-
+        return nge;
     }
 
     public static void main(String[] args) {
