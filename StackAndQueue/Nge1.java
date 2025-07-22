@@ -24,7 +24,13 @@ public class Nge1 {
         int[] nge = new int[n];
 
         for (int num : nums2) {
-            while (!stack.isEmpty() )
+            while (!stack.isEmpty() && stack.peek() < num) {
+                map.put(stack.pop(), num);
+            }
+            stack.push(num);
+        }
+        for (int i=0; i<n; i++) {
+            
         }
 
 
