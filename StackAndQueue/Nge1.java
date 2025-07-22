@@ -32,8 +32,7 @@ public class Nge1 {
         for (int i=0; i<n; i++) {
             nge[i] = map.getOrDefault(nums1[i], -1);
         }
-
-
+        return nge;
 
         // Brute-force ---------------------------| O(n1 * n2)
 //        int n1 = nums1.length, n2=nums2.length;
