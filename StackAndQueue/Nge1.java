@@ -14,7 +14,7 @@ Explanation: The next greater element for each value of nums1 is as follows:
 public class Nge1 {
 
     private static int[] nge1(int[] nums1, int[] nums2) {
-        // Brute-force
+        // Brute-force ---------------------------| O(n1 * n2)
         int n1 = nums1.length, n2=nums2.length;
         int[] nge = new int[n1];
 
