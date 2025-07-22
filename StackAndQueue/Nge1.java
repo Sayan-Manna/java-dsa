@@ -1,6 +1,9 @@
 package StackAndQueue;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 // LC: 496
 /*
@@ -15,6 +18,9 @@ public class Nge1 {
 
     private static int[] nge1(int[] nums1, int[] nums2) {
         // Optimal ------------------------------|
+        Map<Integer, Integer> map = new HashMap<>();
+        Stack<Integer> stack = new Stack<>();
+        
 
 
 
