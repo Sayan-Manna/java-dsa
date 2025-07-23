@@ -5,23 +5,23 @@ import java.util.Arrays;
 public class NearestSmallerElement {
     private static int[] nse(int[] nums) {
         // Optimal ---------|
-        
+
 
         // Brute-force
-//        int n = nums.length;
-//        int[] nse = new int[n];
-//        for (int i=0; i<n; i++) {
-//            boolean found = false;
-//            for (int j = i-1; j>=0; --j) {
-//                if (nums[j] < nums[i]) {
-//                    nse[i] = nums[j];
-//                    found = true;
-//                    break;
-//                }
-//            }
-//            if (!found) nse[i] = -1;
-//        }
-//        return nse;
+        int n = nums.length;
+        int[] nse = new int[n];
+        for (int i=0; i<n; i++) {
+            boolean found = false;
+            for (int j = 0; j<i; ++j) {
+                if (nums[j] < nums[i]) {
+                    nse[i] = nums[j];
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) nse[i] = -1;
+        }
+        return nse;
     }
 
     public static void main(String[] args) {
