@@ -12,8 +12,12 @@ public class Nge2 {
         for (int i=2*n-1; i>=0; --i) {
             boolean found = false;
 
-            
+            while (!stack.isEmpty() && arr[i%n] >= stack.peek()) {
+                stack.pop();
+            }
+            nge[i] = !stack.isEmpty() ? -1 : stack.peek();
         }
+        return nge;
 
         // Brute-force - 2 -------| O(n^2) | O(n)
 //        int n = arr.length;
