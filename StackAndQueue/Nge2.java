@@ -7,7 +7,7 @@ public class Nge2 {
         // Brute-force - 2
         int n = arr.length;
         int[] nge = new int[n];
-        for (int i=0; i<n-1; i++) {
+        for (int i=0; i<n; i++) {
             boolean isPresent = false;
             for (int j=i+1; j<i+n; j++) {
                 int idx = j % n;
