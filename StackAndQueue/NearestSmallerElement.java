@@ -4,7 +4,12 @@ import java.util.Arrays;
 
 public class NearestSmallerElement {
     private static int[] nse(int[] nums1) {
-        
+        // Brute-force
+        int n = nums1.length;
+        int[] nse = new int[n];
+        for (int i=0; i<n; i++) {
+            for (int j = )
+        }
     }
 
     public static void main(String[] args) {
