@@ -10,12 +10,13 @@ public class Nge2 {
         int n = arr.length;
         int[] nge = new int[n];
         for (int i=2*n-1; i>=0; --i) {
-            boolean found = false;
-
             while (!stack.isEmpty() && arr[i%n] >= stack.peek()) {
                 stack.pop();
             }
-            nge[i] = !stack.isEmpty() ? -1 : stack.peek();
+            if (i < n) {
+                nge[i] = !stack.isEmpty() ? -1 : stack.peek();
+            }
+            stack.push(arr[i%n]);
         }
         return nge;
 
@@ -34,7 +35,7 @@ public class Nge2 {
 //            }
 //            if (!isPresent) nge[i] = -1;
 //        }
-        return nge;
+//        return nge;
     }
     public static void main(String[] args) {
         int[] nums1 = {12,1,11};
