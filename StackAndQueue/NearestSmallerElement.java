@@ -3,12 +3,14 @@ package StackAndQueue;
 import java.util.Arrays;
 
 public class NearestSmallerElement {
-    private static int[] nse(int[] nums1) {
+    private static int[] nse(int[] nums) {
         // Brute-force
-        int n = nums1.length;
+        int n = nums.length;
         int[] nse = new int[n];
         for (int i=0; i<n; i++) {
-            for (int j = )
+            for (int j = i-1; i>=0; --i) {
+                if (nums[i])
+            }
         }
     }
 
