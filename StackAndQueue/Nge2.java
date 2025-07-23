@@ -15,7 +15,6 @@ public class Nge2 {
                     nge[i] = arr[idx];
                     isPresent = true;
                     break;
-
                 }
             }
             if (!isPresent) nge[i] = -1;
@@ -23,7 +22,7 @@ public class Nge2 {
         return nge;
     }
     public static void main(String[] args) {
-        int[] nums1 = {2,10,12,1,11};
+        int[] nums1 = {12,1,11};
 
         int[] res = nge2(nums1);
         System.out.println(Arrays.toString(res));
