@@ -9,10 +9,11 @@ public class NearestSmallerElement {
         int[] nse = new int[n];
         for (int i=0; i<n; i++) {
             boolean found = false;
-            for (int j = i-1; i>=0; --i) {
+            for (int j = i-1; j>=0; --j) {
                 if (nums[j] < nums[i]) {
                     nse[i] = nums[j];
                     found = true;
+                    break;
                 }
             }
             if (!found) nse[i] = -1;
