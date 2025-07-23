@@ -14,7 +14,7 @@ public class Nge2 {
                 stack.pop();
             }
             if (i < n) {
-                nge[i] = !stack.isEmpty() ? -1 : stack.peek();
+                nge[i] = !stack.isEmpty() ? stack.peek() : -1;
             }
             stack.push(arr[i%n]);
         }
