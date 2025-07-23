@@ -6,19 +6,17 @@ import java.util.Stack;
 public class NearestSmallerElement {
     private static int[] nse(int[] nums) {
         // Optimal ---------|
-        Stack<Integer> stack = new Stack<>();
-        int n = nums.length;
-        int[] nge = new int[n];
-        for (int i=0; i<n; i++) {
-            while (!stack.isEmpty() && arr[i] >= stack.peek()) {
-                stack.pop();
-            }
-            if (i < n) {
-                nge[i] = !stack.isEmpty() ? stack.peek() : -1;
-            }
-            stack.push(arr[i%n]);
-        }
-        return nge;
+//        Stack<Integer> stack = new Stack<>();
+//        int n = nums.length;
+//        int[] nse = new int[n];
+//        for (int i=0; i<n; i++) {
+//            while (!stack.isEmpty() && nums[i] <= stack.peek()) {
+//                stack.pop();
+//            }
+//            nse[i] = !stack.isEmpty() ? stack.peek() : -1;
+//            stack.push(nums[i]);
+//        }
+//        return nse;
 
 
         // Brute-force
@@ -26,7 +24,7 @@ public class NearestSmallerElement {
 //        int[] nse = new int[n];
 //        for (int i=0; i<n; i++) {
 //            boolean found = false;
-//            for (int j = 0; j<i; ++j) {
+//            for (int j = i-1; j>=0; --j) {
 //                if (nums[j] < nums[i]) {
 //                    nse[i] = nums[j];
 //                    found = true;
