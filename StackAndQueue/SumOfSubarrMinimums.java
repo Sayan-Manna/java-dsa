@@ -2,8 +2,10 @@ package StackAndQueue;
 
 public class SumOfSubarrMinimums {
     private static int sumOfSubarrMins(int[] arr) {
-        // Brute-force
+        // Optimal
         
+        // Brute-force
+
     }
 
     public static void main(String[] args) {
