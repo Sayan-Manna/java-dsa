@@ -1,5 +1,7 @@
 package StackAndQueue;
 
+import java.util.Stack;
+
 public class SumOfSubarrMinimums {
     private static int sumOfSubarrMins(int[] arr) {
         // Optimal
@@ -23,8 +25,13 @@ public class SumOfSubarrMinimums {
     }
 
     private static int[] findNSE(int[] arr) {
-        
-        return null;
+        Stack<Integer> stack = new Stack<>();
+        int n = arr.length;
+        int[] nse = new int[n];
+        for (int i = n-1; i>=0; --i) {
+            while (!stack.isEmpty() && arr[stack.peek()] >= )
+        }
+
     }
 
     public static void main(String[] args) {
