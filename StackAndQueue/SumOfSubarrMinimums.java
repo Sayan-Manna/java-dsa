@@ -13,8 +13,8 @@ public class SumOfSubarrMinimums {
         for (int i=0; i<arr.length; i++) {
             long left = i - psee[i];
             long right = nse[i] - i;
-//            sum = (sum + ((right * left * mod) * arr[i] % mod)) % mod;
-            sum =  sum + (left*right*arr[i])%1000000007;
+            long contrib = ((left * right) % mod * arr[i]) % mod;
+            sum = (sum + contrib) % mod;
         }
         return (int) sum;
 
