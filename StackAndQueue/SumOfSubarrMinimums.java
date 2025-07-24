@@ -13,8 +13,7 @@ public class SumOfSubarrMinimums {
             long right = nse[i] - i;
             sum = (sum + ((right * left * mod) * arr[i] % mod)) % mod;
         }
-        
-
+        return (int) sum;
 
         // Brute-force
 
@@ -24,6 +23,7 @@ public class SumOfSubarrMinimums {
     }
 
     private static int[] findNSE(int[] arr) {
+        
         return null;
     }
 
