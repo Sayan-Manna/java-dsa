@@ -3,7 +3,7 @@ package StackAndQueue;
 public class SumOfSubarrMinimums {
     private static int sumOfSubarrMins(int[] arr) {
         // Optimal
-        
+
         // Brute-force
 
     }
