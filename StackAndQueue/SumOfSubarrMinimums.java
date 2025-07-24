@@ -11,8 +11,9 @@ public class SumOfSubarrMinimums {
         for (int i=0; i<arr.length; i++) {
             long left = i - psee[i];
             long right = nse[i] - i;
-            sum += 
+            sum = (sum + ((right * left * mod) * arr[i] % mod)) % mod;
         }
+        
 
 
         // Brute-force
