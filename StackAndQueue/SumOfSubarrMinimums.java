@@ -5,6 +5,7 @@ public class SumOfSubarrMinimums {
         // Optimal
 
         // Brute-force
+        return 0;
 
     }
 
