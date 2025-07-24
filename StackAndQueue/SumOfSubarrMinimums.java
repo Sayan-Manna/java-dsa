@@ -3,6 +3,8 @@ package StackAndQueue;
 public class SumOfSubarrMinimums {
     private static int sumOfSubarrMins(int[] arr) {
         // Optimal
+        int mod = (int) (1e9 + 7);
+        long sum = 0;
         
 
 
