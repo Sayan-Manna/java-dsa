@@ -1,5 +1,6 @@
 package StackAndQueue;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class SumOfSubarrMinimums {
@@ -9,6 +10,7 @@ public class SumOfSubarrMinimums {
         long sum = 0;
         int[] nse = findNSE(arr);
         int[] psee = findPSEE(arr);
+        System.out.println(Arrays.toString(nse) + "::" + Arrays.toString(psee));
 
         for (int i=0; i<arr.length; i++) {
             long left = i - psee[i];
