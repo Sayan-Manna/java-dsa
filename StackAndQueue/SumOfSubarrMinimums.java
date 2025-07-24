@@ -6,10 +6,12 @@ public class SumOfSubarrMinimums {
         int mod = (int) (1e9 + 7);
         long sum = 0;
         int[] nse = findNSE(arr);
-        int[] pse = findPSEE(arr);
+        int[] psee = findPSEE(arr);
 
         for (int i=0; i<arr.length; i++) {
-            long left = i -
+            long left = i - psee[i];
+            long right = nse[i] - i;
+            sum += 
         }
 
 
