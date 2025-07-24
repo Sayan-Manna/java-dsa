@@ -6,15 +6,18 @@ public class SumOfSubarrMinimums {
         int mod = (int) (1e9 + 7);
         long sum = 0;
         int[] nse = findNSE(arr);
-        int[] pse = findPSE(arr);
-        
+        int[] pse = findPSEE(arr);
+
+        for (int i=0; i<arr.length; i++) {
+            long left = i -
+        }
 
 
         // Brute-force
 
     }
 
-    private static int[] findPSE(int[] arr) {
+    private static int[] findPSEE(int[] arr) {
     }
 
     private static int[] findNSE(int[] arr) {
