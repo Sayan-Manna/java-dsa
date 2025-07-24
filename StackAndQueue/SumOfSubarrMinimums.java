@@ -29,9 +29,12 @@ public class SumOfSubarrMinimums {
         int n = arr.length;
         int[] nse = new int[n];
         for (int i = n-1; i>=0; --i) {
-            while (!stack.isEmpty() && arr[stack.peek()] >= )
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                stack.pop();
+            }
+            nse[i] = stack.isEmpty() ? n : stack.peek();
+            stack.push(i);
         }
-
     }
 
     public static void main(String[] args) {
