@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class SumOfSubarrMinimums {
-    private static int sumOfSubarrMins(int[] arr) {
+    public static int sumOfSubarrMins(int[] arr) {
         // Optimal
         int mod = (int) (1e9 + 7);
         long sum = 0;
@@ -24,7 +24,7 @@ public class SumOfSubarrMinimums {
 
     }
 
-    private static int[] findPSEE(int[] arr) {
+    public static int[] findPSEE(int[] arr) {
         Stack<Integer> stack = new Stack<>();
         int n = arr.length;
         int[] psee = new int[n];
@@ -38,7 +38,7 @@ public class SumOfSubarrMinimums {
         return psee;
     }
 
-    private static int[] findNSE(int[] arr) {
+    public static int[] findNSE(int[] arr) {
         Stack<Integer> stack = new Stack<>();
         int n = arr.length;
         int[] nse = new int[n];
