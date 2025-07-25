@@ -2,7 +2,7 @@ package StackAndQueue;
 
 public class SumOfSubarrRanges {
     private static int sumOfSubRanges(int[] arr) {
-        
+        long maxSum
     }
 
     public static void main(String[] args) {
