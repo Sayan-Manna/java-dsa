@@ -13,7 +13,15 @@ public class SumOfSubarrRanges {
     private static long sumOfSubarrMax(int[] arr) {
         int mod = (int) (1e9 + 7);
         long sum = 0;
-        int[] nge = 
+        int[] ngee = findNGEE(arr);
+        int[] pge = findPGE(arr);
+        for (int i=0; i<arr.length; i++) {
+            long left = i - pge[i];
+            long right = nse[i] - i;
+            long contrib = ((left * right) % mod * arr[i]) % mod;
+            sum = (sum + contrib) % mod;
+        }
+        return (int) sum;
     }
 
     public static void main(String[] args) {
