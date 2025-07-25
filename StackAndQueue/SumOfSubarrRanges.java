@@ -1,8 +1,12 @@
 package StackAndQueue;
 
+
+import static StackAndQueue.SumOfSubarrMinimums.sumOfSubarrMins;
+
 public class SumOfSubarrRanges {
     private static int sumOfSubRanges(int[] arr) {
-        long maxSum
+        long minSumSubarr = sumOfSubarrMins(arr);
+        long
     }
 
     public static void main(String[] args) {
