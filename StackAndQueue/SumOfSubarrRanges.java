@@ -6,7 +6,10 @@ import static StackAndQueue.SumOfSubarrMinimums.sumOfSubarrMins;
 public class SumOfSubarrRanges {
     private static int sumOfSubRanges(int[] arr) {
         long minSumSubarr = sumOfSubarrMins(arr);
-        long
+        long maxSumSubarr = sumOfSubarrMax(arr);
+    }
+
+    private static long sumOfSubarrMax(int[] arr) {
     }
 
     public static void main(String[] args) {
