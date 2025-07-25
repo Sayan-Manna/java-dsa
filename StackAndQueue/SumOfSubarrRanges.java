@@ -28,7 +28,7 @@ public class SumOfSubarrRanges {
     public static int[] findNGEE(int[] arr) {
         Stack<Integer> stack = new Stack<>();
         int n = arr.length;
-        int[] nse = new int[n];
+        int[] ngee = new int[n];
         for (int i = n-1; i>=0; --i) {
             while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
                 stack.pop();
