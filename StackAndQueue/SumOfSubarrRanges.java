@@ -1,7 +1,12 @@
 package StackAndQueue;
 
 public class SumOfSubarrRanges {
-    public static void main(String[] args) {
+    private static int sumOfSubRanges(int[] arr) {
         
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {4,-2,-3,4,1};
+        System.out.println(sumOfSubRanges(arr));
     }
 }
