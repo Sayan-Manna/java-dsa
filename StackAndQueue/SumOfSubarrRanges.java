@@ -4,12 +4,14 @@ package StackAndQueue;
 import static StackAndQueue.SumOfSubarrMinimums.sumOfSubarrMins;
 
 public class SumOfSubarrRanges {
-    private static int sumOfSubRanges(int[] arr) {
+    private static long sumOfSubRanges(int[] arr) {
         long minSumSubarr = sumOfSubarrMins(arr);
         long maxSumSubarr = sumOfSubarrMax(arr);
+        return maxSumSubarr - minSumSubarr;
     }
 
     private static long sumOfSubarrMax(int[] arr) {
+        
     }
 
     public static void main(String[] args) {
