@@ -11,7 +11,7 @@ public class SumOfSubarrRanges {
     }
 
     private static long sumOfSubarrMax(int[] arr) {
-        
+        int mod = 
     }
 
     public static void main(String[] args) {
