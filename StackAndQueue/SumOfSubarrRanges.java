@@ -30,16 +30,27 @@ public class SumOfSubarrRanges {
         int n = arr.length;
         int[] ngee = new int[n];
         for (int i = n-1; i>=0; --i) {
-            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+            while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
                 stack.pop();
             }
-            nse[i] = stack.isEmpty() ? n : stack.peek();
+            ngee[i] = stack.isEmpty() ? n : stack.peek();
             stack.push(i);
         }
-        return nse;
+        return ngee;
     }
-
-
+    public static int[] findPGE(int[] arr) {
+        int n = arr.length;
+        int[] pge = new int[n];
+        Stack<Integer> stack = new Stack<>();
+        for (int i=0; i<n; i++) {
+            while (!stack.isEmpty() && arr[stack.peek()] <= arr[i]) {
+                stack.pop();
+            }
+            pge[i] = stack.isEmpty() ? -1 : stack.peek();
+            stack.push(i);
+        }
+        return pge;
+    }
     public static void main(String[] args) {
         int[] arr = {4,-2,-3,4,1};
         System.out.println(sumOfSubRanges(arr));
