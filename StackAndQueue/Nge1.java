@@ -18,6 +18,9 @@ public class Nge1 {
 
     private static int[] nge1(int[] nums1, int[] nums2) {
         // Optimal ------------------------------|
+        /*
+        *
+         */
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
         int n = nums1.length;
@@ -44,7 +47,7 @@ public class Nge1 {
 //            int target = nums1[i];
 //            boolean found = false;
 //
-//            // find the nge for the target number
+//            // find the target then nge for the target number
 //            for (int j = 0; j < n2; j++) {
 //                if (nums2[j] == target) {
 //                    found = true; // we found the target number in nums2[], now find the nge
