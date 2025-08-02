@@ -18,6 +18,14 @@ public class NextGreaterElem {
     private static int[] nextGreaterElements(int[] arr) {
 
         // Using monotonic stack
+        /* Algorithm
+         * 1. Obviously I need the access for the right elements so I will start from the end
+         * 2. for last elemet or other element when stack is empty then it is -1
+         * 3. Now put elements in stack and check if the top element is greater than the current element -> if yes then it is the next greater element
+               - So for [1,2,3,4] -> when I am at 2, 3 will be my next greater even though 4 > 3
+         * 4. Now when stack is non-empty and current number is > stack top then pop the top element as this can't be the next greater element
+                - So for [3,1,2,5] -> when I am at 3, stack contains [1,2,4,6] -> 1,2 are not the next greater elements -> pop them
+        */
         int n = arr.length;
         Stack<Integer> st = new Stack<>();
         int[] nge = new int[n];
