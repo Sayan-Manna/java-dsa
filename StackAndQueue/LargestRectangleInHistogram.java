@@ -6,9 +6,31 @@ import java.util.Stack;
 public class LargestRectangleInHistogram {
 
     private static int largestRectangleArea(int[] arr) {
-        // Optimal 2 -------------
-        
+        // Optimal 2 ------------- O(2N) | O(N)
+        Stack<Integer> st = new Stack<>();
+        int maxArea = 0;
+        int n = arr.length;
 
+        for(int i = 0; i < n; i++) {
+            while(!st.empty() && arr[st.peek()] > arr[i]) {
+                int element = st.peek();
+                st.pop();
+                int nse = i;
+                int pse = st.empty() ? -1 : st.peek();
+                maxArea = Math.max(arr[element] * (nse - pse - 1), maxArea);
+            }
+            st.push(i);
+        }
+
+        while(!st.empty()) {
+            int nse = n;
+            int element = st.peek();
+            st.pop();
+            int pse = st.empty() ? -1 : st.peek();
+            maxArea = Math.max(arr[element] * (nse - pse - 1), maxArea);
+        }
+
+        return maxArea;
 
         // Optimal 1 ------------- O(5N) | O(4N)
         /*
@@ -16,14 +38,14 @@ public class LargestRectangleInHistogram {
         * using the concept of the next greater element and the next smaller element.
         * [1,5,6,2] -> If I am at 5, the rectangle I can form taking 5 and 6. Formation stops at pse and nse
         */
-        int maxArea = Integer.MIN_VALUE;
-        int[] pse = findPSE(arr);
-        int[] nse = findNSE(arr);
-        for (int i=0; i<arr.length; i++) {
-            int area = arr[i] * (nse[i]-pse[i]-1);
-            maxArea = Math.max(area, maxArea);
-        }
-        return maxArea;
+//        int maxArea = Integer.MIN_VALUE;
+//        int[] pse = findPSE(arr);
+//        int[] nse = findNSE(arr);
+//        for (int i=0; i<arr.length; i++) {
+//            int area = arr[i] * (nse[i]-pse[i]-1);
+//            maxArea = Math.max(area, maxArea);
+//        }
+//        return maxArea;
 
         // Brute-force -------- O(N^2) | O(1)
 //        int maxArea = 0;
