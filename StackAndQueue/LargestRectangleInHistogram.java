@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class LargestRectangleInHistogram {
 
-    private static int largestRectangleArea(int[] arr) {
+    public static int largestRectangleArea(int[] arr) {
         // Optimal 2 ------------- O(2N) | O(N)
         Stack<Integer> st = new Stack<>();
         int maxArea = 0;

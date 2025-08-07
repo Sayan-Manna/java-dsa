@@ -14,18 +14,19 @@ public class StackImpls {
             top++;
             arr[top] = num;
         }
-
+        /*
+        * top needs to be removed to change its position --1 and return the prev top element
+        */
         int pop() {
             int elem = arr[top];
             top--;
             return elem;
 
         }
-
         int top() {
             return arr[top];
         }
-
+        // top is like index, so top + 1
         int size() {
             return top + 1;
         }
