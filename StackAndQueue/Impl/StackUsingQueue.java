@@ -1,60 +1,24 @@
 package StackAndQueue.Impl;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 
 class stack {
 
-    Queue<Integer> queue = new LinkedList<>();
+    Queue<Integer> queue = new ArrayDeque<>(); // or LinkedList<>()
     // 1 Queue approach :
-//    void push(int num) {
-//        queue.add(num);
-//        // shift all elements to the right
-//        /*
-//        * start from 0 till before the last number that gets pushed
-//        * now we need to pop them out one by one and add to queue one by one
-//        * `queue.add(queue.poll())`
-//        */
-//        for (int i=0; i<queue.size()-1; i++) {
-//            queue.add(queue.remove());
-//        }
-//    }
-//    int pop() {
-//        return queue.remove();
-//    }
-//    int top() {
-//        if (queue.isEmpty()) {
-//            throw new NoSuchElementException("Stack is empty");
-//        }
-//        return queue.peek();
-//    }
-//    int size() {
-//        return queue.size();
-//    }
-
-
-    // 2 Queue approach :
-    Queue<Integer> queue2 = new LinkedList<>();
-    public stack() {
-        queue = new LinkedList<>();
-        queue2 = new LinkedList<>();
-    }
-
     void push(int num) {
-        // Push to 2nd q
-        queue2.offer(num);
-        // move all elements from q1 to q2 after the top pushed element
+        queue.add(num);
+        // shift all elements to the right
         /*
-        * 
+        * start from 0 till before the last number that gets pushed
+        * now we need to pop them out one by one and add to queue one by one
+        * `queue.add(queue.poll())`
         */
-        while (!queue2.isEmpty()) {
-            queue2.offer(queue.poll());
+        for (int i=0; i<queue.size()-1; i++) {
+            queue.add(queue.remove());
         }
-        // Swap references
-        Queue<Integer> temp = queue;
-        queue = queue2;
-        queue2 = temp;
     }
     int pop() {
         return queue.remove();
@@ -68,6 +32,39 @@ class stack {
     int size() {
         return queue.size();
     }
+
+
+    // 2 Queue approach :
+//    Queue<Integer> queue2 = new LinkedList<>();
+//    public stack() {
+//        queue = new ArrayDeque<>(); // only used to store top and after top elements (before swapping)
+//        queue2 = new ArrayDeque<>();
+//    }
+//
+//    void push(int num) {
+//        // Push to 2nd q
+//        queue2.offer(num);
+//        // move all elements from q1 to q2 after the top pushed element
+//        while (!queue2.isEmpty()) {
+//            queue2.offer(queue.poll());
+//        }
+//        // Swap references
+//        Queue<Integer> temp = queue;
+//        queue = queue2;
+//        queue2 = temp;
+//    }
+//    int pop() {
+//        return queue.remove();
+//    }
+//    int top() {
+//        if (queue.isEmpty()) {
+//            throw new NoSuchElementException("Stack is empty");
+//        }
+//        return queue.peek();
+//    }
+//    int size() {
+//        return queue.size();
+//    }
 
 }
 public class StackUsingQueue {
