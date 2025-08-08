@@ -16,6 +16,7 @@ class Queue {
         currSize = 0;
         maxSize = 16;
     }
+
     // Queue with size constructor
     public Queue(int maxSize) {
         this.maxSize = maxSize;
@@ -26,19 +27,19 @@ class Queue {
     }
 
 
-
     void push(int num) {
         if (currSize == maxSize) {
             System.out.println("Queue is full");
             System.exit(1);
         }
         // if queue is empty or non empty -> position the start and end
-        if (end == -1) {
+        if (currSize == 0) {
             start = 0;
             end = 0;
-        }else {
+        } else {
             end = (end + 1) % maxSize;
         }
+        // Push the element
         arr[end] = num;
         System.out.println("The element pushed is " + num);
         currSize++;
@@ -53,12 +54,13 @@ class Queue {
         if (currSize == 1) {
             start = -1;
             end = -1;
-        }else{
-            start = (start+1) % maxSize;
+        } else {
+            start = (start + 1) % maxSize;
         }
         currSize--;
         return popped;
     }
+
     int top() {
         if (start == -1) {
             System.out.println("Queue is empty");
@@ -66,7 +68,8 @@ class Queue {
         }
         return arr[start];
     }
+
     int size() {
-        return end - start +1;
+        return currSize;
     }
 }
