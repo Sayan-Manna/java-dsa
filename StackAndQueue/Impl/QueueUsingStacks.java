@@ -3,16 +3,39 @@ package StackAndQueue.Impl;
 import java.util.Stack;
 
 class MyQueue {
-    Stack<Integer> input = new Stack<>();
-    Stack<Integer> output = new Stack<>();
+    // Approach 2 : O(1) | O(2N)
 
-    public MyQueue() {}
 
-    void push(int x) {
-
-    }
-    
-
+    // Approahc 1 : O(2N) in push | O(2N) SC
+//    Stack<Integer> stack1 = new Stack<>();
+//    Stack<Integer> stack2 = new Stack<>();
+//
+//    public MyQueue() {}
+//
+//    void push(int x) {
+//        // #1 : s1 -> s2
+//        while (!stack1.isEmpty()){
+//            stack2.push(stack1.pop());
+//        }
+//        // #2 : x -> s1
+//        stack1.push(x);
+//        // #3 : s2 -> s1
+//        while (!stack2.isEmpty()) {
+//            stack1.push(stack2.pop());
+//        }
+//    }
+//    int pop() {
+//        if (stack1.isEmpty()) {
+//            System.out.println("Stack is empty");
+//        }
+//        return stack1.pop();
+//    }
+//    int peek() {
+//        return stack1.peek();
+//    }
+//    int size() {
+//        return stack1.size();
+//    }
 }
 
 public class QueueUsingStacks {
