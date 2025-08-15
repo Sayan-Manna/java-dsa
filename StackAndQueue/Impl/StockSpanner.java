@@ -2,25 +2,24 @@ package StackAndQueue.Impl;
 
 import java.util.*;
 
-
 class Spanner {
 //    List<Integer> list;
-    Deque<Integer> stack = new Stack<>();
+    Deque<Pair> stack;
+    private int idx;
 
     Spanner() {
 //        list = new ArrayList<>();
-        stack = new Stack<>();
+        stack = new ArrayDeque<>();
+        idx = -1;
     }
 
     public int next(int price) {
-        int ans = 0;
-        map.put(price, count++);
-
-        while (!stack.isEmpty() && stack.peek() <= price) {
+        idx++;
+        while (!stack.isEmpty() && stack.peek().x <= price) {
             stack.pop();
         }
-        ans = stack.isEmpty() ? count : count - map.get(stack.peek())-1;
-        stack.push(price);
+        int ans = stack.isEmpty() ? idx+1 : idx - stack.peek().y;
+        stack.push(new Pair(price, idx));
         return ans;
 
 //        list.add(price);
