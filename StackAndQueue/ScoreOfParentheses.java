@@ -2,6 +2,7 @@ package StackAndQueue;
 
 public class ScoreOfParentheses {
   private static int findScore(String s) {
+      return 0;
 
   }
 
