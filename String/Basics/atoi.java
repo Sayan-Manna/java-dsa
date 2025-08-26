@@ -35,62 +35,127 @@ Reading stops at the first non-digit character 'w'.
 // talk to muthu, get the creds for bfl env -> brainstorm ->
 public class atoi {
     public static void main(String[] args) {
-        String s = "-91283472332";
+        String s = "ab12";
         System.out.println(myAtoi(s));
-
 
     }
 
     private static int myAtoi(String s) {
         /*
-        * Simple problem only thing is how cleanly you can code
-        * trim first for leading and trailing spaces
-        * now flag for -ve and non -ve -> we need flag as when ans is just starting and has 0 value ans = -ans will be 0 only -> same for +ve also
-        * ans is first taken as long as we need to check if it is within the range of int
-        * -ve or +ve must be 1st so  when i==0 check and update flag -> continue (don't check further simply i++)
-        * Now if char is not digit break
-        * if range of [0-9] then find the int digit by ch-'0' and update ans = ans*10 + dig
-        * if -ve flag is true then check if -ans < Integer.MIN_VALUE return Integer.MIN_VALUE -> also update the ans as -ans
-        * if -ve flag is false then check if ans > Integer.MAX_VALUE return Integer.MAX_VALUE
-        * Now if not out of range but -ve flag is true then ans = -ans at last and return and in int
-
-        */
+         * Recursive approach
+         * Nothing but for every char check all the requirements -> so i++ will be there
+         * Do the initial processing like trim and sign handling outside the recursion.
+         * If sign present update the start index and a boolean flag
+         * -------------
+         * Now in recursion check if i is out of bounds -> return ans formed till now -
+         * BASE CASE
+         * If char is not digit return ans formed till now - BASE CASE
+         * If digit then form the ans = ans*10 + dig
+         * Check for range if -ve flag is true check -ans < Integer.MIN_VALUE return
+         * Integer.MIN_VALUE
+         * If -ve flag is false check ans > Integer.MAX_VALUE return Integer.MAX_VALUE
+         * Finally return the ans formed in int
+         * Main helper function waits for the return value for every chars and returns
+         */
         s = s.trim();
-        if (s.length() == 0) return 0;
+        if (s.length() == 0)
+            return 0;
         boolean isNegative = false;
         long ans = 0;
+        int start = 0;
 
-        for (int i=0; i<s.length(); i++) {
-            char ch = s.charAt(i);
-            // neg handle
-            if (i==0) {
-                if (ch == '-') {
-                    isNegative = true;
-                    continue;
-                }else if (ch=='+'){
-                    isNegative = false;
-                    continue;
-                }
-            }
-            // if not within digits break ---- main fun
-            if (ch >='0' && ch <= '9') {
-                int dig = ch - '0';
-                ans = ans * 10 + dig;
-
-                if (isNegative) {
-                    long check = -ans;
-                    if (check < Integer.MIN_VALUE) return Integer.MIN_VALUE;
-                }
-                else {
-                    if (ans > Integer.MAX_VALUE) return Integer.MAX_VALUE;
-                }
-
-            }else {
-                break;
-            }
+        // handle sign
+        if (s.charAt(0) == '-') {
+            isNegative = true;
+            start++;
+        } else if (s.charAt(0) == '+') {
+            start++;
         }
-        if (isNegative) ans = -ans;
-        return (int)ans;
 
+        return helper(s, start, ans, isNegative);
+
+        /*
+         * Simple problem only thing is how cleanly you can code
+         * trim first for leading and trailing spaces
+         * now flag for -ve and non -ve -> we need flag as when ans is just starting and
+         * has 0 value ans = -ans will be 0 only -> same for +ve also
+         * ans is first taken as long as we need to check if it is within the range of
+         * int
+         * -ve or +ve must be 1st so when i==0 check and update flag -> continue (don't
+         * check further simply i++)
+         * Now if char is not digit break
+         * if range of [0-9] then find the int digit by ch-'0' and update ans = ans*10 +
+         * dig
+         * if -ve flag is true then check if -ans < Integer.MIN_VALUE return
+         * Integer.MIN_VALUE -> also update the ans as -ans
+         * if -ve flag is false then check if ans > Integer.MAX_VALUE return
+         * Integer.MAX_VALUE
+         * Now if not out of range but -ve flag is true then ans = -ans at last and
+         * return and in int
+         * 
+         */
+        // s = s.trim();
+        // if (s.length() == 0)
+        // return 0;
+        // boolean isNegative = false;
+        // long ans = 0;
+
+        // for (int i = 0; i < s.length(); i++) {
+        // char ch = s.charAt(i);
+        // // neg handle
+        // if (i == 0) {
+        // if (ch == '-') {
+        // isNegative = true;
+        // continue;
+        // } else if (ch == '+') {
+        // isNegative = false;
+        // continue;
+        // }
+        // }
+        // // if not within digits break ---- main fun
+        // if (ch >= '0' && ch <= '9') {
+        // int dig = ch - '0';
+        // ans = ans * 10 + dig;
+
+        // if (isNegative) {
+        // long check = -ans;
+        // if (check < Integer.MIN_VALUE)
+        // return Integer.MIN_VALUE;
+        // } else {
+        // if (ans > Integer.MAX_VALUE)
+        // return Integer.MAX_VALUE;
+        // }
+
+        // } else {
+        // break;
+        // }
+        // }
+        // if (isNegative)
+        // ans = -ans;
+        // return (int) ans;
+
+    }
+
+    private static int helper(String s, int i, long ans, boolean isNegative) {
+        // Base case
+        if (i >= s.length()) {
+            return isNegative ? (int) -ans : (int) ans;
+        }
+        char ch = s.charAt(i);
+        // if the char is not digit return whatever ans is formed till now
+        if (ch < '0' || ch > '9') {
+            return isNegative ? (int) -ans : (int) ans;
+        }
+        int dig = ch - '0';
+        ans = ans * 10 + dig;
+        if (isNegative) {
+            long check = -ans;
+            if (check < Integer.MIN_VALUE)
+                return Integer.MIN_VALUE;
+        } else {
+            if (ans > Integer.MAX_VALUE)
+                return Integer.MAX_VALUE;
+        }
+        return helper(s, i + 1, ans, isNegative);
     }
 }
