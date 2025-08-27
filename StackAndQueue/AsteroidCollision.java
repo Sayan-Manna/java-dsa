@@ -14,64 +14,63 @@ Two asteroids moving in the same direction will never meet.
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class AsteroidCollision {
     private static int[] asteroidCollision(int[] asteroids) {
         // List solution also possible
-//        Stack<Integer> stack = new Stack<>();
-//        for (int asteroid : asteroids) {
-//            // if all are +ve -> moving in right -> no collision
-//            if (asteroid > 0) stack.push(asteroid);
-//            // If -ve found -> Collision will happen until the stack is empty otherwise with which we should compare the asteroid size
-//            // all 3 conditions must be true to prevent infinite loop
-//            while (!stack.isEmpty() && stack.peek() > 0 && stack.peek() < -asteroid) {
-//                stack.pop();
-//            }
-//            // if stack is empty or stack has a -ve asteriod -> PUSH -> No Collision -> [4,17,15,-18,-19] case
-//            if (stack.isEmpty() || stack.peek() < 0) {
-//                stack.push(asteroid);
-//            }
-//            // If 10 and -10 -> both are gone
-//            if (stack.peek() == -asteroid) {
-//                stack.pop();
-//            }
-//        }
-//        return stack.stream().mapToInt(Integer::valueOf).toArray();
-
-        // Brute-force --- 2nd
-
-
-        List<Integer> list = new ArrayList<>();
-        int j = -1;
-        for (int i=0; i< asteroids.length; i++) {
-            if (asteroids[i] >= 0) {
-                list.add(asteroids[i]);
-                j++;
+        Stack<Integer> stack = new Stack<>();
+        for (int asteroid : asteroids) {
+            // if all are +ve -> moving in right -> no collision
+            if (asteroid > 0) stack.push(asteroid);
+            // If -ve found -> Collision will happen until the stack is empty otherwise with which we should compare the asteroid size
+            // all 3 conditions must be true to prevent infinite loop
+            while (!stack.isEmpty() && stack.peek() > 0 && stack.peek() < -asteroid) {
+                stack.pop();
             }
-            else {
-                boolean destroyed = false;
-                while (!list.isEmpty() && j>=0 && list.get(j) > 0) {
-                    if (Math.abs(asteroids[i]) > list.get(j)) {
-                        list.remove(j);
-                        --j;
-                    }else if(Math.abs(asteroids[i]) == list.get(j)){
-                            list.remove(j);
-                            destroyed = true;
-                            --j;
-                            break;
-                    }
-                    else {
-                        destroyed = true;
-                        break;
-                    }
-                }
-                if (!destroyed) {
-                    list.add(asteroids[i]);
-                    j++;
-                }
+            // if stack is empty or stack has a -ve asteriod -> PUSH -> No Collision -> [4,17,15,-18,-19] case
+            if (stack.isEmpty() || stack.peek() < 0) {
+                stack.push(asteroid);
+            }
+            // If 10 and -10 -> both are gone
+            if (stack.peek() == -asteroid) {
+                stack.pop();
             }
         }
-        return list.stream().mapToInt(Integer::valueOf).toArray();
+        return stack.stream().mapToInt(Integer::valueOf).toArray();
+
+        // Brute-force --- 2nd
+//        List<Integer> list = new ArrayList<>();
+//        int j = -1;
+//        for (int i=0; i< asteroids.length; i++) {
+//            if (asteroids[i] >= 0) {
+//                list.add(asteroids[i]);
+//                j++;
+//            }
+//            else {
+//                boolean destroyed = false;
+//                while (!list.isEmpty() && j>=0 && list.get(j) > 0) {
+//                    if (Math.abs(asteroids[i]) > list.get(j)) {
+//                        list.remove(j);
+//                        --j;
+//                    }else if(Math.abs(asteroids[i]) == list.get(j)){
+//                            list.remove(j);
+//                            destroyed = true;
+//                            --j;
+//                            break;
+//                    }
+//                    else {
+//                        destroyed = true;
+//                        break;
+//                    }
+//                }
+//                if (!destroyed) {
+//                    list.add(asteroids[i]);
+//                    j++;
+//                }
+//            }
+//        }
+//        return list.stream().mapToInt(Integer::valueOf).toArray();
 
 
         // Brute-force ------------------||
