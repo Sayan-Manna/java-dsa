@@ -23,16 +23,16 @@ public class Pattern132 {
     return false;
 
     // Brute-force ------------ O(n^3)
-    // for (int i = 0; i < nums.length; i++) {
-    // for (int j = i + 1; j < nums.length; j++) {
-    // for (int k = j + 1; k < nums.length; k++) {
-    // if (nums[i] < nums[k] && nums[j] > nums[k]) {
-    // return true;
-    // }
-    // }
-    // }
-    // }
-    // return false;
+//      for (int i = 0; i < nums.length; i++) {
+//          for (int j = i + 1; j < nums.length; j++) {
+//              for (int k = j + 1; k < nums.length; k++) {
+//                  if (nums[i] < nums[k] && nums[j] > nums[k]) {
+//                      return true;
+//                  }
+//              }
+//          }
+//      }
+//      return false;
   }
 
   public static void main(String[] args) {
