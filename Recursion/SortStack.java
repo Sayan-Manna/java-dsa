@@ -11,22 +11,24 @@ import java.util.Stack;
 
 public class SortStack {
     private static Stack<Integer> sortStack(Stack<Integer> stack) {
-        // Iterative - aux space
 
+        // Recursive
+        
+
+        // Iterative - aux space : TC : O(n^2) SC : O(n)
         /* Don't think about reverse
          * stack is LIFO -> so everytime you push an element, it goes to the top
          * so if you want to sort in ascending order, you need to make sure that the smaller elements are at the bottom
          */
-        Stack<Integer> temp = new Stack<>();
-        while (!stack.isEmpty()) {
-            int curr = stack.pop();
-            while (!temp.isEmpty() && temp.peek() > curr) {
-                stack.push(temp.pop());
-            }
-            temp.push(curr);
-        }
-
-        return temp;
+//        Stack<Integer> temp = new Stack<>();
+//        while (!stack.isEmpty()) {
+//            int curr = stack.pop();
+//            while (!temp.isEmpty() && temp.peek() > curr) {
+//                stack.push(temp.pop());
+//            }
+//            temp.push(curr);
+//        }
+//        return temp;
 
     }
 
