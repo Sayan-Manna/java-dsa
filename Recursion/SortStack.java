@@ -13,7 +13,7 @@ public class SortStack {
     private static Stack<Integer> sortStack(Stack<Integer> stack) {
 
         // Recursive
-        
+
 
         // Iterative - aux space : TC : O(n^2) SC : O(n)
         /* Don't think about reverse
