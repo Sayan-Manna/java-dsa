@@ -20,15 +20,15 @@ public class SortStack {
          * stack is LIFO -> so everytime you push an element, it goes to the top
          * so if you want to sort in ascending order, you need to make sure that the smaller elements are at the bottom
          */
-//        Stack<Integer> temp = new Stack<>();
-//        while (!stack.isEmpty()) {
-//            int curr = stack.pop();
-//            while (!temp.isEmpty() && temp.peek() > curr) {
-//                stack.push(temp.pop());
-//            }
-//            temp.push(curr);
-//        }
-//        return temp;
+        Stack<Integer> temp = new Stack<>();
+        while (!stack.isEmpty()) {
+            int curr = stack.pop();
+            while (!temp.isEmpty() && temp.peek() > curr) {
+                stack.push(temp.pop());
+            }
+            temp.push(curr);
+        }
+        return temp;
 
     }
 
