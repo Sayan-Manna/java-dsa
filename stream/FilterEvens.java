@@ -3,7 +3,6 @@ package stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class FilterEvens {
     public static void main(String[] args) {
@@ -31,6 +30,25 @@ public class FilterEvens {
                 .filter(n -> n % 2 == 0)
                 .findAny();
         System.out.println(anyEven);
+
+        // Short-circuit checks
+        boolean anyEvenExists = numbers.stream()
+                .anyMatch(n -> n % 2 == 0);
+        System.out.println("Any even exists: " + anyEvenExists);
+        boolean allPositive = numbers.stream()
+                .allMatch(n -> n > 0);
+        System.out.println("All positive: " + allPositive);
+        // noneMatch
+        boolean noneNegative = numbers.stream()
+                .noneMatch(n -> n < 0);
+        System.out.println("None negative: " + noneNegative);
+
+
+
+
+
+
+
 
 
 
