@@ -1,0 +1,23 @@
+package stream;
+
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+// Flatten a List of List to a single list
+public class FlattenList {
+    public static void main(String[] args) {
+        List<List<Integer>> listOfLists = Arrays.asList(
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5),
+                Arrays.asList(6, 7, 8)
+        );
+
+        List<Integer> flat = listOfLists.stream()
+                .flatMap(list -> list.stream())
+                .toList();
+
+        System.out.println(flat);
+
+    }
+}
