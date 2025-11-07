@@ -7,6 +7,6 @@ public class JoinStr {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Sayan", "Manna", "Raj", "Neha");
 
-        
+
     }
 }

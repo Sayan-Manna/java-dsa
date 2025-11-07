@@ -9,6 +9,7 @@ public class CountAndDistinct {
 
         long count = nums.stream()
                 .distinct() // remove duplicates
+                .peek(n -> System.out.println("peek: " + n))
                 .count();
 
         Stream<Integer> lm = nums.stream().distinct();
