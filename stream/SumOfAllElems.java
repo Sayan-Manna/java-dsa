@@ -7,12 +7,25 @@ import java.util.List;
 public class SumOfAllElems {
     public static void main(String[] args) {
         List<Integer> nums = Arrays.asList(4,6,8,10,12);
-
+        // using reduce in boxed stream
         Integer sumOfAllElems = nums.stream()
                 .reduce(0, (a,b) -> a + b); // Start with 0 and add each
 
         System.out.println(sumOfAllElems);
+
+        // boxed stream (Stream<Integer> not Stream<int> so this is boxed) -> mapToInt -> sum()
+        int sum1 = nums.stream()
+                .mapToInt(n->n.intValue()) // convert Integer to int (IntStream)
+                .sum(); // sum() works on IntStream
+        System.out.println(sum1);
+
     }
 }
 // 	•	reduce(initialValue, (acc, element) -> acc + element)
 // Works like a for-loop accumulator.
+
+
+/*
+boxed() = boxing (int → Integer) and switching back to Stream<Integer>
+
+ */
