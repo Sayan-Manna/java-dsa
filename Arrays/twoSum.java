@@ -13,7 +13,7 @@ public class twoSum {
         for (int i : arr) {
             int complement = target-i;
             if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), index++};
+                return new int[]{map.get(complement), index};
             }
             map.put(i, index++);
         }
