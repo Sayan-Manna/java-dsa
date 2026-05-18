@@ -61,7 +61,7 @@ public class majorityElements {
 //        System.out.println(arr[arr.length/2]);
 
 //        -----------------------
-        // Naive : find the max Frequency and check if it greater than n/2
+        // Naive : find the max Frequency and check if it greater than n/2 ->  No need max freq if majority element exists surely
 //        int maxCount = Integer.MIN_VALUE;
 //        int index = -1;
 //        for (int i = 0; i < arr.length; i++) {
@@ -80,6 +80,18 @@ public class majorityElements {
 //            System.out.println(arr[index]);
 //        } else {
 //            System.out.println("No");
+//        }
+        // Naive 2 ------------
+//        for (int i=0; i<n; i++) {
+//            int count =1;
+//            for (int j=i+1; j<n; j++) {
+//                if (nums[i] == nums[j]) {
+//                    count += 1;
+//                }
+//            }
+//            if (count > n/2) {
+//                return (nums[i]);
+//            }
 //        }
     }
     public static void main(String[] args) {
