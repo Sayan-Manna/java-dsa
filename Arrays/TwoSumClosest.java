@@ -21,23 +21,23 @@ public class TwoSumClosest {
 
 
 //       // Brute-force
-//        int minDiff = Integer.MAX_VALUE;
-//        for (int i=0; i<arr.length-1; i++) {
-//            for (int j=i+1; j<arr.length; j++) {
-//                int sum = arr[i]+arr[j];
-//                // abs difference
-//                int diff = Math.abs(sum-target);
-//                if (minDiff > diff) {
-//                    minDiff = diff;
-//                    ans[0] = Math.min(arr[i],arr[j]);
-//                    ans[1] = Math.max(arr[i],arr[j]);
-//                }else if (minDiff == diff && (ans[1]-ans[0]) < Math.abs(arr[i]-arr[j])) {
-//                    ans[0] = Math.min(arr[i],arr[j]);
-//                    ans[1] = Math.max(arr[i],arr[j]);
-//
-//                }
-//            }
-//        }
+        int minDiff = Integer.MAX_VALUE;
+        for (int i=0; i<arr.length-1; i++) {
+            for (int j=i+1; j<arr.length; j++) {
+                int sum = arr[i]+arr[j];
+                // abs difference
+                int diff = Math.abs(sum-target);
+                if (minDiff > diff) {
+                    minDiff = diff;
+                    ans[0] = Math.min(arr[i],arr[j]);
+                    ans[1] = Math.max(arr[i],arr[j]);
+                }else if (minDiff == diff && (ans[1]-ans[0]) < Math.abs(arr[i]-arr[j])) {
+                    ans[0] = Math.min(arr[i],arr[j]);
+                    ans[1] = Math.max(arr[i],arr[j]);
+
+                }
+            }
+        }
         System.out.println(Arrays.toString(ans));
     }
 }
