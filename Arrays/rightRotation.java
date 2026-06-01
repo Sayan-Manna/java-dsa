@@ -16,7 +16,13 @@ public class rightRotation {
             rightRotationByOne(arr);
         }
     }
-    // Right Rotate by reversing  --  O(n) TC
+    // Right Rotate by reversing  -----  O(n) TC
+    /*
+    * We need to do AB to BA, where A=[1,2], B=[3,4,5]
+    * Reverse A => A' = [2,1]
+    * Reverse B => B' = [5,4,3]
+    * Reverse A'B' => (A'B')' = BA => [3,4,5,1,2]
+     */
     static void reverse(int[] arr, int low, int high) {
         for (int i=low, j=high; i < j; i++,j--) {
             int temp = arr[i];

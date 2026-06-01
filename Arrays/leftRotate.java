@@ -10,8 +10,6 @@ public class leftRotate {
     for (i -> d-1)
       leftRotateByOne(arr) -> basically 1st elem will go to last, 2nd elem to prev last shifts
 
-
-
      */
     static void leftRotateByOne(int[] arr) {
         int first = arr[0];
