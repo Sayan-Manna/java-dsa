@@ -1,5 +1,5 @@
 package String.Basics;
-/*
+sa IOUUUUYY RTR RD2WAQΩS/*
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
 
 The algorithm for myAtoi(string s) is as follows:
@@ -10,7 +10,7 @@ Conversion: Read the integer by skipping leading zeros until a non-digit charact
 Rounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range.
 Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.
 Return the integer as the final result.
-
+iouytrer32 q
 
 Input: s = " -042"
 Output: -42
