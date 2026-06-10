@@ -12,6 +12,10 @@ public class checkIfMajorityInSortedArr {
         // Binary Search
 
         // As the array is sorted : O(n)/O(1)
+        /*
+        * As sorted, if two elements are same they will be together e.g. 101,101
+        * So do the counting -> check if the count is greater than n/2, if yes then majority element is found
+         */
         int majority = -1;
         int count = 1;
         for (int i=1; i<arr.length; i++) {

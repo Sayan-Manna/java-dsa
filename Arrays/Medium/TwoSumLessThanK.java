@@ -27,7 +27,7 @@ public class TwoSumLessThanK {
         int maxSum = -1;
         // Sorting + BS
         // 2 pointer + Sorting :: O(nlogn + n) | O(1)
-        Arrays.sort(arr);
+        Arrays.sort(arr); // [1,8,23,24, 33,34,54,75]
         int low = 0, high=arr.length-1;
         while (low < high) {
             int sum = arr[low]+arr[high];
