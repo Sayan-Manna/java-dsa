@@ -10,7 +10,7 @@ import java.util.*;
 public class ThreeSum {
     // O(N * N); Aux Space: O(1)
     static List<List<Integer>> Solution(int[] arr) {
-        // // Optimized
+        // Optimized
         List<List<Integer>> ans = new LinkedList<>();
         // Sort the array
         Arrays.sort(arr);
