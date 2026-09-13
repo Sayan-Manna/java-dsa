@@ -14,6 +14,6 @@ public class CountAndDistinct {
 
         Stream<Integer> lm = nums.stream().distinct();
         System.out.println(count);
-        System.out.println(lm);
+        System.out.println(lm.toList());
     }
 }
