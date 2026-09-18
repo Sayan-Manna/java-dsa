@@ -70,5 +70,6 @@ public class removeDuplicates {
         for (int i = 0; i < k; i++) {
             System.out.print(arr[i] + " ");
         }
+        // System.out.println(Arrays.toString(arr));
     }
 }
